@@ -1,0 +1,24 @@
+{
+    "name": "atwix/oro-mandrill",
+    "description": "OroCRM basic Mandrill integration",
+    "homepage": "https://github.com/Atwix/oro-mandrill.git",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "name": "Atwix",
+            "homepage": "https://atwix.com/"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Atwix\\Bundle\\MandrillBundle": "src/"
+        }
+    },
+    "target-dir": "src/Atwix/Bundle/MandrillBundle",
+    "require": {
+        "php": ">=5.4.24",
+        "oro/platform": "1.*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

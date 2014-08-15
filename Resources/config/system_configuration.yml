@@ -1,0 +1,61 @@
+oro_system_configuration:
+    groups:
+        atwix_extensions:
+            icon:   icon-globe
+            title:  'Atwix Extensions'
+        atwix_mandrill_settings:
+            title:  'Mandrill Settings'
+    fields:
+        atwix_mandrill.api_key:
+            type: text
+            priority: 100
+            options:
+                resettable: false
+                label: 'API Key'
+                constraints:
+        atwix_mandrill.api_username:
+            type: text
+            priority: 90
+            options:
+                resettable: false
+                label: 'Mandrill Username'
+                constraints:
+        atwix_mandrill.enable_mandrill_integration:
+            type: oro_config_checkbox
+            priority: 110
+            options:
+                label: 'Mandrill Integration Enabled'
+                required: false
+                constraints:
+        atwix_mandrill.smtp_host:
+            type: text
+            priority: 60
+            options:
+                label: 'SMTP host'
+                required: true
+                constraints:
+                    - NotBlank: ~
+        atwix_mandrill.smtp_port:
+            type: text
+            priority: 50
+            options:
+                label: 'SMTP port'
+                required: true
+                constraints:
+                    - NotBlank: ~
+
+    tree:
+        system_configuration:
+            platform:
+                children:
+                    general_setup:
+                        children:
+                            atwix_extensions:
+                                children:
+                                    atwix_mandrill_settings:
+                                        children:
+                                            - atwix_mandrill.api_key
+                                            - atwix_mandrill.api_username
+                                            - atwix_mandrill.enable_mandrill_integration
+                                            - atwix_mandrill.smtp_host
+                                            - atwix_mandrill.smtp_port

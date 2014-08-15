@@ -1,0 +1,10 @@
+parameters:
+    atwix_mandrill.atwix_mailer.class:    Atwix\Bundle\MandrillBundle\Mailer\AtwixMailer
+
+services:
+    atwix_mandrill.atwix_mailer:
+        class: %atwix_mandrill.atwix_mailer.class%
+        arguments:
+             - @swiftmailer.mailer.mandrill.transport
+             - @oro_config.global
+             - @service_container
