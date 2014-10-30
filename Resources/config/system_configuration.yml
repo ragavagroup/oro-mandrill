@@ -7,6 +7,7 @@ oro_system_configuration:
             title:  'Mandrill Settings'
     fields:
         atwix_mandrill.api_key:
+            data_type: string
             type: text
             priority: 100
             options:
@@ -14,6 +15,7 @@ oro_system_configuration:
                 label: 'API Key'
                 constraints:
         atwix_mandrill.api_username:
+            data_type: string
             type: text
             priority: 90
             options:
@@ -21,6 +23,7 @@ oro_system_configuration:
                 label: 'Mandrill Username'
                 constraints:
         atwix_mandrill.enable_mandrill_integration:
+            data_type: boolean
             type: oro_config_checkbox
             priority: 110
             options:
@@ -28,6 +31,7 @@ oro_system_configuration:
                 required: false
                 constraints:
         atwix_mandrill.smtp_host:
+            data_type: string
             type: text
             priority: 60
             options:
@@ -36,6 +40,7 @@ oro_system_configuration:
                 constraints:
                     - NotBlank: ~
         atwix_mandrill.smtp_port:
+            data_type: string
             type: text
             priority: 50
             options:
