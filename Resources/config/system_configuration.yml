@@ -2,7 +2,7 @@ oro_system_configuration:
     groups:
         atwix_extensions:
             icon:   icon-globe
-            title:  'Atwix Extensions'
+            title:  'Mandrill Settings'
         atwix_mandrill_settings:
             title:  'Mandrill Settings'
     fields:
